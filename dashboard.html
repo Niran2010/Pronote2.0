@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Bord - Pronote Beta</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <h1>Bienvenue dans le tableau de bord</h1>
-        <section id="recommendations">
-            <h2>Recommandations</h2>
+        <h1>Bienvenue sur Pronote Beta</h1>
+
+        <section class="suggestions" id="suggestionsSection">
+            <h2>Suggestions</h2>
             <p>Dans l'objectif d'un Pronote dont l'interface satisferait tous les professeurs, nous vous demandons de bien vouloir nous faire part de vos impressions, attentes, et recommandations.</p>
-            <textarea rows="5" placeholder="Vos recommandations..."></textarea>
-            <button>Envoyer</button>
+            <textarea id="suggestionText" rows="5" placeholder="Écrivez vos suggestions ici..."></textarea>
+            <button type="button" onclick="sendSuggestions()">Envoyer</button>
         </section>
 
-        <section id="observations">
-            <h2>Observations</h2>
-            <textarea rows="5" placeholder="Vos observations..."></textarea>
-            <button>Envoyer</button>
-        </section>
+        <!-- Message de confirmation caché -->
+        <div class="confirmation-message" id="confirmationMessage" style="display: none;">
+            <p>Le site est encore en construction, merci de vos recommandations. Venez voir une prochaine fois l'avancée de la construction.</p>
+        </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
